@@ -1,0 +1,13 @@
+$fade-duration: 0.5s;
+
+.fade-up {
+  transition: opacity $fade-duration, transform $fade-duration;
+
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.visible .fade-up, .visible.fade-up {
+  transform: translateY(0px);
+  opacity: 1;
+}

@@ -1,0 +1,5 @@
+<section id="{{ .Params.id }}" class="projects">
+    {{ with .GetPage "projects" }}
+        {{ partial "partials/project-list" . }}
+    {{ end }}
+</section>

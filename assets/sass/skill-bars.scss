@@ -1,0 +1,66 @@
+.skills {
+  padding: 150px 20px 100px;
+}
+
+.skills__box {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@include media-breakpoint-up(md) {
+  .skills__box {
+    width: 800px;
+  }
+}
+
+.skills__heading {
+  margin: 15px 0 5px;
+}
+
+.skill {
+  margin: 10px 0 15px;
+}
+
+.skill__label {
+  @include font-bold;
+  color: $content-highlight;
+  font-size: 0.9em;
+}
+
+.skill__bar {
+  background-color: $skill-background;
+  height: 4px;
+  margin: 5px 0 5px 0;
+}
+
+.skill__bar::before {
+  content: "";
+  height: 100%;
+  top: 0;
+  display: block;
+  background-color: var(--skill-bar-color);
+
+  width: 0;
+}
+
+@for $i from 1 to 10 {
+  .skill:nth-child(#{$i}) .skill__bar:before {
+    transition: width 1s #{$i * 0.05s};
+  }
+}
+
+.visible .skill-level-basic::before {
+  width: 50%;
+}
+
+.visible .skill-level-intermediate::before {
+  width: 70%;
+}
+
+.visible .skill-level-advanced::before {
+  width: 80%;
+}
+
+.visible .skill-level-expert::before {
+  width: 95%;
+}

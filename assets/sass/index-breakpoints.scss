@@ -1,0 +1,14 @@
+@include media-breakpoint-up(md) {
+  .projects {
+    flex-grow: 1;
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project {
+  }
+}
+

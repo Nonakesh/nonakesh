@@ -1,0 +1,12 @@
+{{/*  Main Style  */}}
+{{ $stylemain := resources.Get "sass/main.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $stylemain.RelPermalink }}" integrity="{{ $stylemain.Data.Integrity }}">
+
+{{/* Deferred Scripts (Will only run when the DOM is loaded) */}}
+{{ $navigation := resources.Get "/js/navigation.js" }}
+{{ $scrollVisibility := resources.Get "/js/scrollVisibility.js" }}
+{{ $fullscript := slice $navigation $scrollVisibility | resources.Concat "/js/bundle.js" | minify | fingerprint "sha512" }}
+<script src="{{ $fullscript.RelPermalink }}" integrity="{{ $fullscript.Data.Integrity }}" defer></script>
+
+<link rel="stylesheet" href="https://use.typekit.net/fov3etd.css">
+<script src="https://kit.fontawesome.com/052b831511.js" crossorigin="anonymous"></script>

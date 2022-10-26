@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ block "title" . }}
+            {{ .Site.Title }}
+        {{ end }}
+    </title>
+    {{ partial "imports.html" . }}
+</head>
+<body>
+{{ partial "header.html" . }}
+<main class="main">
+    {{ block "main" . }}
+    {{ end }}
+</main>
+</body>
+</html>

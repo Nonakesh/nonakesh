@@ -1,0 +1,9 @@
+{{ define "main" }}
+    {{ with .Site.GetPage "/home"}}
+        {{ range .Resources.ByType "page" }}
+            {{ $widget := or .Params.widget "blank"}}
+            {{ $widgetPath := printf "widgets/%s.html" $widget }}
+            {{ partial $widgetPath .}}
+        {{ end }}
+    {{ end }}
+{{ end }}

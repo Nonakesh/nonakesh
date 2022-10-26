@@ -1,0 +1,29 @@
+.skill-lists {
+  margin: 10px 0 0;
+}
+
+.skill-list-container {
+  margin: 15px 0 0;
+}
+
+.skills__list {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 4px;
+}
+
+.skill-list__skill {
+  display: flex;
+  align-items: center;
+}
+
+.skill-list__skill:before {
+  content: "▷";
+  margin: 0 8px 0 0;
+  font-size: 60%;
+  vertical-align: center;
+  text-align: center;
+}

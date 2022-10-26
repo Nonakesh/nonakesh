@@ -1,0 +1,98 @@
+@import "normalize";
+
+@import "variables";
+@import "breakpoints";
+
+// === General Theme ===
+// Backgrounds
+$background: #242424;
+$primary-background: #6303B1;
+$secondary-background: #770044;
+
+// Text
+$content-color: #BBBBBB;
+$content-highlight: #DDDDDD;
+$primary: #cc99ff;
+
+// ===== Fine grained =====
+// Nav
+$nav-link-color: $content-color;
+$nav-link-hover-background: rgba($primary-background, 0.4);
+$nav-link-focus-background: rgba($primary-background, 0.6);
+
+// About
+$hero__title: $content-highlight;
+$hero__subtitle: $primary;
+
+$background-gradient-start: #6303B1;
+$background-gradient-end: #ff0099;
+
+$hero-content-width: 500px;
+$hero-width: calc(#{$hero-content-width} + var(--hero-image-width));
+
+$hero-skew: 11deg;
+$tan-hero-skew: 0.19438030913;
+$hero-ribbon-additional-padding: 100px;
+
+// Skills
+$skill-background: #555555;
+
+// Projects
+$project-card-background: $primary-background;
+
+// Tags
+$tag-color: $secondary-background;
+
+@mixin font-regular {
+  font-family: multi-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-medium {
+  font-family: multi-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: multi-display, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin float-box {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@import "fades";
+@import "navigation";
+@import "hero";
+@import "projects";
+@import "index-breakpoints";
+@import "tags";
+
+@import "skill-bars";
+//@import "skill-lists";
+
+html {
+  line-height: 1.3;
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: $background;
+  color: $content-color;
+  @include font-regular;
+}
+
+.main {
+  overflow-x: hidden;
+}

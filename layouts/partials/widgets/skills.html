@@ -1,0 +1,14 @@
+<section id="{{ .Params.id }}" class="skills">
+    <div class="skills__box">
+        <h2 class="skills__heading">Skills</h2>
+        <div class="skills__list">
+            {{ range .Params.skills }}
+                <div class="skill appear fade-up">
+                    <div class="skill__label">{{ .name }}</div>
+                    <div class="skill__bar skill-level-{{ .level }}"
+                         style="--skill-bar-color: {{ .color }};"></div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

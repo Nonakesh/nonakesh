@@ -1,0 +1,21 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  flex-grow: 0;
+
+  padding: 3px 5px;
+  margin: 5px 0;
+
+  //border-style: solid;
+  //border-color: $tag-color;
+  //border-width: 1px;
+
+  background-color: $tag-color;
+  border-radius: 8px;
+
+  font-size: 0.8em;
+}

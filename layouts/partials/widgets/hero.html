@@ -1,0 +1,16 @@
+<section id="{{ .Params.id }}" class="hero">
+    {{ $imagePath := .Params.image }}
+    {{ $imageResize := .Params.imageResize }}
+    {{ $image := resources.Get $imagePath }}
+    {{ $image = $image.Resize $imageResize }}
+    <div class="hero__box" style="--hero-image-width: {{ $image.Width }}px">
+        <img class="hero__image appear fade-up" src="{{ $image.Permalink }}" alt="A image of me.">
+        <div class="hero__content">
+            <h1 class="hero__intro appear fade-up">{{ .Params.intro }}</h1>
+            <h2 class="hero__title appear fade-up">{{ .Params.title }}</h2>
+            <div class="hero__text appear fade-up">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
