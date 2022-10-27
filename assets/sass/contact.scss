@@ -79,3 +79,17 @@
     background-color: $contact-button-hover;
   }
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.g-recaptcha-notice {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  color: $contact-recaptcha-notice;
+
+  a {
+    color: $contact-recaptcha-links;
+  }
+}

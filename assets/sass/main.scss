@@ -10,6 +10,7 @@ $primary-background: #6303B1;
 $secondary-background: #770044;
 
 // Text
+$content-darker: #888888;
 $content-color: #BBBBBB;
 $content-highlight: #DDDDDD;
 $primary: #813cff;
@@ -56,6 +57,8 @@ $contact-caret-color: $content-highlight;
 $contact-button-background: $primary;
 $contact-button-hover: $primary-highlight;
 $contact-button-color: $content-highlight;
+$contact-recaptcha-notice: $content-darker;
+$contact-recaptcha-links: $primary;
 
 @mixin font-regular {
   font-family: multi-display, sans-serif;
