@@ -14,6 +14,7 @@
                     {{ if .Params.image }}
                         <img class="featured-project__image fade-up" src="{{ $image.Permalink }}"
                              alt="A image showing {{ .Title }}"
+                             loading="lazy"
                              style="width: {{$image.Width}}px">
                     {{ end }}
                 {{ end }}
