@@ -8,5 +8,19 @@
 {{ $fullscript := slice $navigation $scrollVisibility | resources.Concat "/js/bundle.js" | minify | fingerprint "sha512" }}
 <script src="{{ $fullscript.RelPermalink }}" integrity="{{ $fullscript.Data.Integrity }}" defer></script>
 
+{{/* Adobe fonts */}}
 <link rel="stylesheet" href="https://use.typekit.net/fov3etd.css">
+
+{{/* FontAwesome */}}
 <script src="https://kit.fontawesome.com/052b831511.js" crossorigin="anonymous"></script>
+
+{{/* Recaptcha */}}
+<script src="https://www.google.com/recaptcha/api.js?render={6LeTvbkiAAAAACq5ymYsZpYFOMtbqjvz-pDcKztP}"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('{6LeTvbkiAAAAACq5ymYsZpYFOMtbqjvz-pDcKztP}', {action: 'submit'}).then(function (token) {
+            console.info("got token: " + token);
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>

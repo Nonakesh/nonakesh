@@ -5,7 +5,8 @@ tags:
     - 🦀 Rust
     - C#
     - Unity
-hasMore: false
+image: images/Game.jpg
+featured: true
 ---
 An unannounced game project I have been working on as a solo dev with Unity as a renderer and a Rust backend.
 

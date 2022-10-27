@@ -2,7 +2,7 @@
     {{ $imagePath := .Params.image }}
     {{ $imageResize := .Params.imageResize }}
     {{ $image := resources.Get $imagePath }}
-    {{ $image = $image.Resize $imageResize }}
+    {{ $image = $image.Resize (print $imageResize " webp q80") }}
     <div class="hero__box" style="--hero-image-width: {{ $image.Width }}px">
         <img class="hero__image appear fade-up" src="{{ $image.Permalink }}" alt="A image of me.">
         <div class="hero__content">

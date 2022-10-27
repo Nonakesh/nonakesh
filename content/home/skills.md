@@ -17,7 +17,7 @@ skills:
   color: "#77a25a"
 - name: Unity
   level: advanced
-  color: "#676767"
+  color: "#AAAAAA"
 - name: Java
   level: intermediate
   color: "#4476ad"

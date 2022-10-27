@@ -5,7 +5,8 @@ tags:
     - HLSL
     - Unity
     - C#
-hasMore: false
+image: images/GrassShader.png
+featured: true
 ---
 
 A high-end DirectX 11 shader for the Unity asset store for rendering realistic or stylized grass.

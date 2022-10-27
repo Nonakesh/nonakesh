@@ -12,7 +12,9 @@ $secondary-background: #770044;
 // Text
 $content-color: #BBBBBB;
 $content-highlight: #DDDDDD;
-$primary: #cc99ff;
+$primary: #813cff;
+$primary-highlight: #a574ff;
+$primary-light: #cc99ff;
 
 // ===== Fine grained =====
 // Nav
@@ -22,7 +24,7 @@ $nav-link-focus-background: rgba($primary-background, 0.6);
 
 // About
 $hero__title: $content-highlight;
-$hero__subtitle: $primary;
+$hero__subtitle: $primary-light;
 
 $background-gradient-start: #6303B1;
 $background-gradient-end: #ff0099;
@@ -38,10 +40,22 @@ $hero-ribbon-additional-padding: 100px;
 $skill-background: #555555;
 
 // Projects
+$project-featured-color: $primary;
+$project-featured-color-in-box: $primary-light;
 $project-card-background: $primary-background;
 
 // Tags
-$tag-color: $secondary-background;
+$tag-background: $secondary-background;
+$tag-color: $content-color;
+
+// Contact
+$contact-input-border: $primary;
+$contact-input-border-hover: $primary-highlight;
+$contact-input-color: $content-color;
+$contact-caret-color: $content-highlight;
+$contact-button-background: $primary;
+$contact-button-hover: $primary-highlight;
+$contact-button-color: $content-highlight;
 
 @mixin font-regular {
   font-family: multi-display, sans-serif;
@@ -72,6 +86,7 @@ $tag-color: $secondary-background;
 @import "projects";
 @import "index-breakpoints";
 @import "tags";
+@import "contact";
 
 @import "skill-bars";
 //@import "skill-lists";

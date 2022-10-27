@@ -1,23 +1,32 @@
+// ========== Section ===============
 .projects {
-  padding: 100px 10px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 50px 10px;
 }
+
+$project-content-short-margin: 10px;
+$project-content-long-margin: 50px;
+
+$featured-projects-width: 800px;
 
 .projects__heading {
-  margin: 20px 20px 5px;
+  margin: 20px $project-content-short-margin 50px;
 }
 
-.project-list {
+// ========== Featured Projects ===============
+.featured-projects {
+  margin: 10px auto;
+  max-width: $featured-projects-width;
+}
+
+.featured-project-list {
   list-style-type: none;
   padding: 0;
-  margin: 10px 0;
 }
 
-.project {
-  margin: 50px 0;
-
+.featured-project {
   max-width: 500px;
+
+  margin: 80px 0;
 
   display: grid;
   align-items: center;
@@ -29,7 +38,7 @@
   }
 }
 
-.project__image {
+.featured-project__image {
   max-width: 100%;
 
   border-radius: 20px;
@@ -37,70 +46,82 @@
   grid-area: 1 / 1 / -1 / -1;
 }
 
-$project-content-short-margin: 10px;
-$project-content-long-margin: 50px;
-
 //noinspection CssReplaceWithShorthandSafely
-.project__content {
+.featured-project__content {
   grid-area: 1 / 1 / -1 / -1;
 
   transition-delay: 0.2s;
 
   margin: $project-content-short-margin;
-  margin-left: $project_content-long-margin;
 }
 
-.project__title {
+.featured-project__featured {
+  font-size: 0.9em;
+  @include font-regular;
+  color: $project-featured-color;
+}
+
+.featured-project__title {
   max-width: 250px;
   margin: 0 0 10px auto;
 }
 
 // Switch side for every second project
-.project:nth-child(odd) {
+.featured-project:nth-child(odd) {
   align-items: start;
   text-align: start;
 
-  .project__title {
+  .featured-project__title {
     margin: 0 auto 10px 0;
   }
 
   .tags {
     justify-content: flex-start;
   }
+}
 
-  //noinspection CssReplaceWithShorthandSafely
-  .project__content {
-    margin: $project-content-short-margin;
-    margin-right: $project_content-long-margin;
+// Small screen larger gap
+@include media-breakpoint-down(sm) {
+  .featured-project:nth-child(odd) {
+    //noinspection CssReplaceWithShorthandSafely
+    .featured-project__content {
+      margin-right: $project_content-long-margin;
+    }
+  }
+  .featured-project:nth-child(even) {
+    //noinspection CssReplaceWithShorthandSafely
+    .featured-project__content {
+      margin-left: $project_content-long-margin;
+    }
   }
 }
 
 @include media-breakpoint-up(sm) {
-  .project {
+  .featured-project {
     max-width: 100%;
     grid-template-columns: 30% 60% 10%;
   }
 
-  .project__image {
+  .featured-project__image {
     grid-area: 1 / 1 / -1 / 3;
   }
 
-  .project__content {
+  .featured-project__content {
     grid-area: 1 / 2 / -1 / -1;
-    margin: $project-content-short-margin;
   }
 
   // Switch side for every second project
-  .project:nth-child(odd) {
+  .featured-project:nth-child(odd) {
     grid-template-columns: 10% 60% 30%;
     align-items: start;
     text-align: start;
 
-    .project__image {
+    .featured-project__image {
+      margin-left: auto;
       grid-area: 1 / 2 / -1 / -1;
     }
 
-    .project__content {
+    .featured-project__content {
       grid-area: 1 / 1 / -1 / -2;
     }
 
@@ -111,11 +132,11 @@ $project-content-long-margin: 50px;
 }
 
 @include media-breakpoint-up(md) {
-  .project {
+  .featured-project {
     grid-template-columns: 55% 35% 10%;
   }
 
-  .project:nth-child(odd) {
+  .featured-project:nth-child(odd) {
     grid-template-columns: 10% 35% 55%;
   }
 }
@@ -123,25 +144,77 @@ $project-content-long-margin: 50px;
 @mixin project-card {
   padding: 15px 20px;
 
-  background-color: rgba($project-card-background, 0.8);
-  backdrop-filter: blur(5px);
+  background-color: rgba($project-card-background, 0.6);
+  backdrop-filter: blur(4px);
 
   border-radius: 5px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 @include media-breakpoint-down(md) {
-  .project__text {
+  .featured-project__text {
     @include project-card;
+  }
+
+  .featured-project__featured {
+    color: $project-featured-color-in-box;
   }
 }
 
 @include media-breakpoint-up(md) {
-  .project__summary {
+  .featured-project__summary {
     @include project-card;
   }
 }
 
-.project__summary p {
+.featured-project__summary p {
   margin: 5px 0;
 }
+
+// ========== Other Projects ===============
+.other-projects {
+  max-width: 1400px;
+  margin: 100px auto;
+}
+
+.other-projects__heading {
+  text-align: center;
+}
+
+.other-project-list {
+  list-style-type: none;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.other-project {
+  @include project-card;
+
+  max-width: 100%;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .tags {
+    flex-grow: 1;
+    justify-content: start;
+    align-items: flex-end;
+  }
+}
+
+.other-project__heading {
+  @include font-medium;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.other-project p {
+  margin: 5px 0;
+}
+

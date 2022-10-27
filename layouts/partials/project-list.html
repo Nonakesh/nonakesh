@@ -1,29 +1,63 @@
-<h1 class="projects__heading">Projects</h1>
-<ul class="project-list">
-    {{ range (.Pages.ByParam "start").Reverse }}
-        <li class="project appear">
-            {{ if .Params.image }}
-                {{ $imagePath := .Params.image }}
-                {{ $image := resources.Get $imagePath }}
-                {{ $image = $image.Resize "500x webp q80" }}
-                {{/*                    {{ $image = $image.Filter (images.Colorize 250 70 50) }}*/}}
+<div class="featured-projects">
+    <h1 class="projects__heading">Featured Projects</h1>
+    <ul class="featured-project-list">
+        {{ $sortedProjects := (.Pages.ByParam "start").Reverse }}
+
+        {{/* Featured Projects */}}
+        {{ range (where $sortedProjects "Params.featured" true) }}
+            <li class="featured-project appear">
                 {{ if .Params.image }}
-                    <img class="project__image fade-up" src="{{ $image.Permalink }}" alt="A image showing {{ .Title }}"
-                         style="width: {{$image.Width}}px">
+                    {{ $imagePath := .Params.image }}
+                    {{ $image := resources.Get $imagePath }}
+                    {{ $image = $image.Resize "500x webp q80" }}
+                    {{/*                    {{ $image = $image.Filter (images.Colorize 250 70 50) }}*/}}
+                    {{ if .Params.image }}
+                        <img class="featured-project__image fade-up" src="{{ $image.Permalink }}"
+                             alt="A image showing {{ .Title }}"
+                             style="width: {{$image.Width}}px">
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-            <div class="project__content fade-up">
-                <div class="project__text">
-                    <h2 class="project__title"> {{ .Title }}</h2>
-                    <div class="project__summary">
-                        {{ .Summary | safeHTML}}
+                <div class="featured-project__content fade-up">
+                    <div class="featured-project__text">
+                        <h1 class="featured-project__featured">Featured Project</h1>
+                        <h2 class="featured-project__title"> {{ .Title }}</h2>
+                        <div class="featured-project__summary">
+                            {{ .Summary | safeHTML}}
 
-                        {{ if .Truncated }}
-                            <a class="project__read-more" href="{{ .Permalink }}">Read more</a>
-                        {{ end }}
+                            {{ if .Truncated }}
+                                <a class="featured-project__read-more" href="{{ .Permalink }}">Read more</a>
+                            {{ end }}
+                        </div>
                     </div>
-                </div>
 
+                    {{ if .Params.Tags }}
+                        <div class="tags">
+                            {{ range .Params.Tags }}
+                                <div class="tag">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<div class="other-projects">
+    <h1 class="projects__heading other-projects__heading">Other Projects</h1>
+    <ul class="other-project-list">
+        {{/* Project Cards */}}
+        {{/* The filter is != true, so projects without the featured param are added here as well. */}}
+        {{ range (where $sortedProjects "Params.featured" "!=" true) }}
+            <li class="other-project appear fade-up">
+                <h1 class="other-project__heading">{{ .Title }}</h1>
+                <div class="other-project__summary">
+                    {{ .Summary | safeHTML }}
+
+                    {{ if .Truncated }}
+                        <a class="featured-project__read-more" href="{{ .Permalink }}">Read more</a>
+                    {{ end }}
+                </div>
                 {{ if .Params.Tags }}
                     <div class="tags">
                         {{ range .Params.Tags }}
@@ -31,7 +65,7 @@
                         {{ end }}
                     </div>
                 {{ end }}
-            </div>
-        </li>
-    {{ end }}
-</ul>
+            </li>
+        {{ end }}
+    </ul>
+</div>
