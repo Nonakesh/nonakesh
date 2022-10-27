@@ -1,5 +1,5 @@
 # Settings
-#baseURL = "http://simonstix.com/"
+#baseURL = "https://simonstix.com/"
 languageCode: "en-US"
 title: "Simon Stix - Portfolio"
 description: "Hi, I'm Simon Stix and this is my personal portfolio."
