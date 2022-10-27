@@ -15,11 +15,11 @@
 <script src="https://kit.fontawesome.com/052b831511.js" crossorigin="anonymous"></script>
 
 {{/* Recaptcha */}}
-<script src="https://www.google.com/recaptcha/api.js?render={6LeTvbkiAAAAACq5ymYsZpYFOMtbqjvz-pDcKztP}"></script>
+{{ $recaptchaSiteKey := "6LeTvbkiAAAAACq5ymYsZpYFOMtbqjvz-pDcKztP" }}
+<script src="https://www.google.com/recaptcha/api.js?render={{$recaptchaSiteKey}}"></script>
 <script>
     grecaptcha.ready(function () {
-        grecaptcha.execute('{6LeTvbkiAAAAACq5ymYsZpYFOMtbqjvz-pDcKztP}', {action: 'submit'}).then(function (token) {
-            console.info("got token: " + token);
+        grecaptcha.execute('{{$recaptchaSiteKey}}', {action: 'submit'}).then(function (token) {
             document.getElementById('g-recaptcha-response').value = token;
         });
     });
