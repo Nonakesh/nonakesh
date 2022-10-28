@@ -17,6 +17,8 @@
   align-content: center;
   justify-content: center;
   gap: 40px 20px;
+
+  margin: 60px 0;
 }
 
 @include media-breakpoint-up(md) {
