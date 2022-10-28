@@ -45,7 +45,6 @@
   max-width: $hero-content-width;
   flex-shrink: 1;
   flex-grow: 1;
-
 }
 
 $hero-transition-delay: 0.15s;
@@ -72,6 +71,12 @@ $hero-transition-delay: 0.15s;
   margin: 10px 0 0 0;
 
   transition-delay: #{3 * $hero-transition-delay};
+
+  text-align: justify;
+
+  p {
+    margin: 8px 0;
+  }
 }
 
 .hero__image {

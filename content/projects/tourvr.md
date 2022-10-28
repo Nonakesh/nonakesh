@@ -9,4 +9,6 @@ hasMore: false
 
 A bachelor thesis project for visualizing flight and hiking routes in mobile VR.
 
+It was optimized to support a view distance of over 100km on a mobile phone.
+
 <!--more-->

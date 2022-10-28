@@ -14,10 +14,9 @@ links:
 featured: true
 ---
 
-A procedural content generation asset on the Unity Asset Store. Finished, except for
-support and maintenance.
+A procedural content generation asset with a focus on usability. 
 
-A procedural content generation asset on the Unity Asset Store. Finished, except for
-support and maintenance.
+Internally, it uses constraint solvers to fit together tiles on a grid while following constraints created by the user.
+It can use the Wave Function Collapse algorithm or the Z3 SMT solver.
 
 <!--more-->

@@ -6,6 +6,6 @@ techTags:
 featured: false
 ---
 
-Insert text here
+A WPF based administration software for a second hand store in Linz.
 
 <!--more-->

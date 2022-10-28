@@ -1,0 +1,3 @@
+{{ $pastYear := index .Params 0 }}
+{{ $currentYear := now.Year }}
+{{ sub $currentYear $pastYear }}

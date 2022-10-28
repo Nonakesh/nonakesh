@@ -5,6 +5,11 @@
 .skills__box {
   max-width: 100%;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
 }
 
 @include media-breakpoint-up(md) {
@@ -13,8 +18,29 @@
   }
 }
 
+@include media-breakpoint-up(sm) {
+  .skills__box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 .skills__heading {
   margin: 15px 0 5px;
+}
+
+$text-percent: 35%;
+
+.skills__text {
+  flex-basis: $text-percent;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.skills__list {
+  flex-grow: 1;
 }
 
 .skill {

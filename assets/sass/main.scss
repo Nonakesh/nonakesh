@@ -19,6 +19,9 @@ $primary-bright: #cc99ff;
 $secondary: #e30083;
 $secondary-highlight: #ff7dc0;
 
+$link-color: $primary;
+$link-color-highlight: $primary-highlight;
+
 // ===== Fine grained =====
 // Nav
 $nav-link-color: $content-color;
@@ -65,12 +68,12 @@ $contact-button-background: $primary;
 $contact-button-hover: $primary-highlight;
 $contact-button-color: $content-highlight;
 $contact-recaptcha-notice: $content-darker;
-$contact-recaptcha-links: $primary;
-$contact-recaptcha-links-hover: $primary-highlight;
+$contact-recaptcha-links: $link-color;
+$contact-recaptcha-links-hover: $link-color-highlight;
 
 // Copyright
-$copyright-color: $primary;
-$copyright-hover: $primary-highlight;
+$copyright-color: $link-color;
+$copyright-hover: $link-color-highlight;
 
 @mixin font-regular {
   font-family: multi-display, sans-serif;
@@ -125,6 +128,14 @@ body {
 
 .main {
   overflow-x: hidden;
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-highlight;
+  }
 }
 
 .copyright {

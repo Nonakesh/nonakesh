@@ -23,4 +23,11 @@ social:
   url: https://www.linkedin.com/in/simon-stix-555bb5104/
 ---
 
-Insert some generic personal information here. More info. I like programming and stuff. Game dev. Etc.
+I have been an enthusiastic programmer for over {{< years-since 2011 >}} years.
+During that time I've mostly worked on games and tools for game developers, 
+but I'm always happy to explore new areas.
+
+My projects included web development, like this website, procedural art, AI, microcontrollers, 
+but also 3d modelling, texturing, music composition, and most other parts of game development.
+
+I will also use any opportunity to talk about the Rust programming language.

@@ -12,19 +12,18 @@ skills:
 - name: C#
   level: expert
   color: "#601e71"
-- name: Shaders
+- name: Game development / Computer graphics
   level: expert
   color: "#77a25a"
-- name: Unity
-  level: advanced
-  color: "#AAAAAA"
 - name: Java
   level: intermediate
   color: "#4476ad"
-- name: Html / Css
+- name: Web development
   level: basic
   color: "#a4941f"
-- name: Javascript
-  level: basic
-  color: "#9d620f"
 ---
+
+Most of my experience comes from being a solo developer, so I have a wide range of experience.
+I have extensive experience in Unity development and C#.
+
+Also, I've been a big fan of Rust for years and have been working on a game with a custom Rust backend.

@@ -1,6 +1,17 @@
 {{ define "main" }}
     <section class="project-page">
         <article>
+            {{ if .Params.image }}
+                {{ $imagePath := .Params.image }}
+                {{ $image := resources.Get $imagePath }}
+                {{ $image = $image.Resize "500x webp q80" }}
+                {{ if .Params.image }}
+                    <img class="project-page__image" src="{{ $image.Permalink }}"
+                         alt="A image showing {{ .Title }}"
+                         loading="lazy"
+                         style="width: {{$image.Width}}px">
+                {{ end }}
+            {{ end }}
             <h1>{{ .Title }}</h1>
             {{ .Content }}
         </article>
