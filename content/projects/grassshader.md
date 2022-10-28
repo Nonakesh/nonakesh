@@ -1,10 +1,15 @@
 ---
 title: DirectX 11 Grass Shader
 start: 2014-06 # The day is not true, but jekyll requires a full date
-tags:
-    - HLSL
-    - Unity
-    - C#
+techTags:
+- HLSL
+- Unity
+- C#
+links:
+- name: Asset Store
+  url: https://assetstore.unity.com/packages/vfx/shaders/directx-11/directx-11-grass-shader-36335?aid=1011l9eTK
+- name: Website
+  url: https://stixgames.com/grassshader
 image: images/GrassShader.png
 featured: true
 ---

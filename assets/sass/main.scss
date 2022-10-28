@@ -16,6 +16,7 @@ $content-highlight: #DDDDDD;
 $primary: #813cff;
 $primary-highlight: #a574ff;
 $primary-light: #cc99ff;
+$secondary: #e30083;
 
 // ===== Fine grained =====
 // Nav
@@ -23,7 +24,7 @@ $nav-link-color: $content-color;
 $nav-link-hover-background: rgba($primary-background, 0.4);
 $nav-link-focus-background: rgba($primary-background, 0.6);
 
-// About
+// Hero
 $hero__title: $content-highlight;
 $hero__subtitle: $primary-light;
 
@@ -37,6 +38,9 @@ $hero-skew: 11deg;
 $tan-hero-skew: 0.19438030913;
 $hero-ribbon-additional-padding: 100px;
 
+$hero-social-color: $content-color;
+$hero-social-hover: $secondary;
+
 // Skills
 $skill-background: #555555;
 
@@ -44,6 +48,7 @@ $skill-background: #555555;
 $project-featured-color: $primary;
 $project-featured-color-in-box: $primary-light;
 $project-card-background: $primary-background;
+$project-link: $secondary;
 
 // Tags
 $tag-background: $secondary-background;
@@ -88,7 +93,7 @@ $contact-recaptcha-links: $primary;
 @import "hero";
 @import "projects";
 @import "index-breakpoints";
-@import "tags";
+@import "tech-tags";
 @import "contact";
 
 @import "skill-bars";

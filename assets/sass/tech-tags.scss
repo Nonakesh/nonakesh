@@ -1,14 +1,17 @@
-.tags {
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+
+  padding: 0;
+  margin: 5px 0;
+  list-style: none;
 }
 
-.tag {
+.tech-tag {
   flex-grow: 0;
 
   padding: 3px 5px;
-  margin: 5px 0;
 
   //border-style: solid;
   //border-color: $tag-color;

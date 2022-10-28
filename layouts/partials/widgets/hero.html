@@ -3,7 +3,7 @@
     {{ $imageResize := .Params.imageResize }}
     {{ $image := resources.Get $imagePath }}
     {{ $image = $image.Resize (print $imageResize " webp q80") }}
-    <div class="hero__box" style="--hero-image-width: {{ $image.Width }}px" >
+    <div class="hero__box" style="--hero-image-width: {{ $image.Width }}px">
         <img class="hero__image appear fade-up"
              src="{{ $image.Permalink }}"
              alt="A image of me."
@@ -15,6 +15,22 @@
             <div class="hero__text appear fade-up">
                 {{ .Content }}
             </div>
+
+            {{ if .Params.social }}
+                <ul class="hero__social-list">
+                    {{ range $index, $element := .Params.social }}
+                        {{ with $element }}
+                            <li class="hero__social appear fade-up">
+                                <a href="{{ .url }}" aria-label="{{ .name }}" target="_blank">
+                                    {{ if .faIcon }}
+                                        <i class="fa {{ .faIcon }}" aria-hidden="true"></i>
+                                    {{ end }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            {{ end }}
         </div>
     </div>
 </section>

@@ -25,19 +25,28 @@
                         <div class="featured-project__summary">
                             {{ .Summary | safeHTML}}
 
-                            {{ if .Truncated }}
-                                <a class="featured-project__read-more" href="{{ .Permalink }}">Read more</a>
+                            {{ if .Params.links }}
+                                <ul class="featured-project__links">
+                                    {{ range .Params.links }}
+                                        <li class="featured-project__link">
+                                            <a href="{{ .url }}" target="_blank">
+                                                {{ .name }}
+                                            </a>
+                                        </li>
+                                    {{ end }}
+
+                                    {{ if .Truncated }}
+                                        <li class="featured-project__link">
+                                            <a href="{{ .Permalink }}">Read more</a>
+                                        </li>
+                                    {{ end }}
+
+                                </ul>
                             {{ end }}
                         </div>
                     </div>
 
-                    {{ if .Params.Tags }}
-                        <div class="tags">
-                            {{ range .Params.Tags }}
-                                <div class="tag">{{ . }}</div>
-                            {{ end }}
-                        </div>
-                    {{ end }}
+                    {{ partial "tech-tags" . }}
                 </div>
             </li>
         {{ end }}
@@ -59,13 +68,7 @@
                         <a class="featured-project__read-more" href="{{ .Permalink }}">Read more</a>
                     {{ end }}
                 </div>
-                {{ if .Params.Tags }}
-                    <div class="tags">
-                        {{ range .Params.Tags }}
-                            <div class="tag">{{ . }}</div>
-                        {{ end }}
-                    </div>
-                {{ end }}
+                {{ partial "tech-tags" . }}
             </li>
         {{ end }}
     </ul>

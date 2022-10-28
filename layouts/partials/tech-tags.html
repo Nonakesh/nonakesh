@@ -1,0 +1,7 @@
+{{ if .Params.techTags }}
+  <ul class="tech-tags">
+    {{ range .Params.techTags }}
+      <li class="tech-tag">{{ . }}</li>
+    {{ end }}
+  </ul>
+{{ end }}

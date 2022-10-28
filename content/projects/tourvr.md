@@ -1,7 +1,7 @@
 ---
 title: TourVR
 start: 2016-08 # The day is not true, but jekyll requires a full date
-tags:
+techTags:
     - C#
     - Unity
 hasMore: false

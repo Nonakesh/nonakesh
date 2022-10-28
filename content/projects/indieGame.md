@@ -1,7 +1,7 @@
 ---
 title: Unannounced indie game
 start: 2020-04 # The day is not true, but jekyll requires a full date
-tags:
+techTags:
     - 🦀 Rust
     - C#
     - Unity

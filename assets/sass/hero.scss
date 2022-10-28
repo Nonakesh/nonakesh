@@ -80,3 +80,30 @@ $hero-transition-delay: 0.15s;
 
   border-radius: 30px;
 }
+
+.hero__social-list {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 15px;
+}
+
+.hero__social {
+  margin: 10px 0;
+  font-size: 1.5em;
+
+  a {
+    color: $hero-social-color;
+  }
+}
+
+.hero__social:hover a {
+  color: $hero-social-hover;
+}
+
+@for $i from 1 through 5 {
+  .hero__social:nth-child(#{$i}) {
+    transition-delay: #{(3 + $i) * $hero-transition-delay};
+  }
+}
