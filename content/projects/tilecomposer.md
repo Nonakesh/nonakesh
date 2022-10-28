@@ -16,7 +16,6 @@ featured: true
 
 A procedural content generation asset with a focus on usability. 
 
-Internally, it uses constraint solvers to fit together tiles on a grid while following constraints created by the user.
-It can use the Wave Function Collapse algorithm or the Z3 SMT solver.
+Internally, it uses constraint solvers to fit tiles together on a grid while following constraints created by the user.
 
 <!--more-->

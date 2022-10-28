@@ -23,7 +23,7 @@ skills:
   color: "#a4941f"
 ---
 
-Most of my experience comes from being a solo developer, so I have a wide range of experience.
-I have extensive experience in Unity development and C#.
+I have mainly been working as a solo developer, which helped me become a generalist in a wide range of topics.
+A large part of my experience is in C# with Unity.
 
-Also, I've been a big fan of Rust for years and have been working on a game with a custom Rust backend.
+I've been a huge fan of Rust for years and have been working on a game with a custom Rust backend.

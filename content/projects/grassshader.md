@@ -14,6 +14,6 @@ image: images/GrassShader.png
 featured: true
 ---
 
-A high-end DirectX 11 shader for the Unity asset store for rendering realistic or stylized grass.
+A high-end DirectX 11 shader for Unity. It can render realistic and stylized grass.
 
 <!--more-->

@@ -8,6 +8,6 @@ techTags:
 
 A VR panoramic view of the then-unfinished Bruckner Tower in Linz. 
 
-The application made it possible to see the view from flats in different directions and heights of the tower.
+The application made it possible to see the view of apartments on different sides and heights of the tower.
 
 <!--more-->

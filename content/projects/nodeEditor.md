@@ -6,8 +6,7 @@ techTags:
     - Unity
 ---
 
-A canceled shader editor that was originally meant to be published on the asset store.
-
+A canceled shader editor that was originally meant to be published on the Unity asset store.
 
 The editor supported custom nodes and output types with the help of C# reflection.
 
