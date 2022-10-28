@@ -92,5 +92,9 @@
 
   a {
     color: $contact-recaptcha-links;
+
+    &:hover {
+      color: $contact-recaptcha-links-hover;
+    }
   }
 }

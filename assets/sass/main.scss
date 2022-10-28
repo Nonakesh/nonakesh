@@ -15,7 +15,7 @@ $content-color: #BBBBBB;
 $content-highlight: #DDDDDD;
 $primary: #813cff;
 $primary-highlight: #a574ff;
-$primary-light: #cc99ff;
+$primary-bright: #cc99ff;
 $secondary: #e30083;
 
 // ===== Fine grained =====
@@ -26,7 +26,7 @@ $nav-link-focus-background: rgba($primary-background, 0.6);
 
 // Hero
 $hero__title: $content-highlight;
-$hero__subtitle: $primary-light;
+$hero__subtitle: $primary-bright;
 
 $background-gradient-start: #6303B1;
 $background-gradient-end: #ff0099;
@@ -46,7 +46,7 @@ $skill-background: #555555;
 
 // Projects
 $project-featured-color: $primary;
-$project-featured-color-in-box: $primary-light;
+$project-featured-color-in-box: $primary-bright;
 $project-card-background: $primary-background;
 $project-link: $secondary;
 
@@ -64,6 +64,11 @@ $contact-button-hover: $primary-highlight;
 $contact-button-color: $content-highlight;
 $contact-recaptcha-notice: $content-darker;
 $contact-recaptcha-links: $primary;
+$contact-recaptcha-links-hover: $primary-highlight;
+
+// Copyright
+$copyright-color: $primary;
+$copyright-hover: $primary-highlight;
 
 @mixin font-regular {
   font-family: multi-display, sans-serif;
@@ -118,4 +123,19 @@ body {
 
 .main {
   overflow-x: hidden;
+}
+
+.copyright {
+  margin: 20px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+
+    color: $copyright-color;
+
+    &:hover {
+      color: $copyright-hover;
+    }
+  }
 }
