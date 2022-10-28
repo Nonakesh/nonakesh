@@ -12,6 +12,9 @@ social:
 - name: Twitter
   faIcon: fa-twitter
   url: https://twitter.com/simon_stix
+- name: Youtube
+  faIcon: fa-youtube
+  url: https://www.youtube.com/channel/UC-Q-SlKoQSZEAT2jM91kNMg
 - name: Github
   faIcon: fa-github
   url: https://github.com/Nonakesh

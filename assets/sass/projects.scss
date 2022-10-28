@@ -80,6 +80,10 @@ $featured-projects-width: 800px;
 .featured-project__link a {
   color: $project-link;
   text-decoration: none;
+
+  &:hover {
+    color: $project-link-hover;
+  }
 }
 
 // Switch side for every second project

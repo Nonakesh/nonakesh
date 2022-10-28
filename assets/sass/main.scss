@@ -17,6 +17,7 @@ $primary: #813cff;
 $primary-highlight: #a574ff;
 $primary-bright: #cc99ff;
 $secondary: #e30083;
+$secondary-highlight: #ff7dc0;
 
 // ===== Fine grained =====
 // Nav
@@ -49,6 +50,7 @@ $project-featured-color: $primary;
 $project-featured-color-in-box: $primary-bright;
 $project-card-background: $primary-background;
 $project-link: $secondary;
+$project-link-hover: $secondary-highlight;
 
 // Tags
 $tag-background: $secondary-background;
