@@ -26,4 +26,4 @@ skills:
 I have mainly been working as a solo developer, which helped me become a generalist in a wide range of topics.
 A large part of my experience is in C# with Unity.
 
-I've been a huge fan of Rust for years and have been working on a game with a custom Rust backend.
+I've been a huge fan of Rust since I first heard about it and have been working on a game with a custom Rust backend for over two years.
