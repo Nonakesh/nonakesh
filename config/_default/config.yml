@@ -1,10 +1,12 @@
 # Settings
-#baseURL = "https://simonstix.com/"
 languageCode: "en-US"
 title: "Simon Stix - Portfolio"
-description: "Hi, I'm Simon Stix and this is my personal portfolio."
 # theme = "hugo-future-imperfect" # <- you won't need this as we copy the theme data!
 #googleAnalytics = "UA-111111111111-1"
 canonifyURLs: true
-copyright: "Simon Stix"
+copyright: "Simon Stix {year}"
 enableRobotsTXT: true
+params:
+  author: Simon Stix
+  description: "Hi, my name is Simon Stix and this is my personal portfolio."
+  keywords: "portfolio, developer, gamedev"
