@@ -1,5 +1,5 @@
 <div class="featured-projects">
-    <h1 class="projects__heading">Featured Projects</h1>
+    <h2 class="projects__heading">Featured Projects</h2>
     <ul class="featured-project-list">
         {{ $sortedProjects := (.Pages.ByParam "start").Reverse }}
 
@@ -19,8 +19,8 @@
                 {{ end }}
                 <div class="featured-project__content fade-up">
                     <div class="featured-project__text">
-                        <h1 class="featured-project__featured">Featured Project</h1>
-                        <h2 class="featured-project__title"> {{ .Title }}</h2>
+                        <div class="featured-project__featured">Featured Project</div>
+                        <h3 class="featured-project__title"> {{ .Title }}</h3>
                         <div class="featured-project__summary">
                             {{ .Summary | safeHTML}}
 
@@ -53,13 +53,13 @@
 </div>
 
 <div class="other-projects">
-    <h1 class="projects__heading other-projects__heading">Other Projects</h1>
+    <h2 class="projects__heading other-projects__heading">Other Projects</h2>
     <ul class="other-project-list">
         {{/* Project Cards */}}
         {{/* The filter is != true, so projects without the featured param are added here as well. */}}
         {{ range (where $sortedProjects "Params.featured" "!=" true) }}
             <li class="other-project appear fade-up">
-                <h1 class="other-project__heading">{{ .Title }}</h1>
+                <h3 class="other-project__heading">{{ .Title }}</h3>
                 <div class="other-project__summary">
                     {{ .Summary | safeHTML }}
 

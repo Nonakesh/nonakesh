@@ -1,8 +1,31 @@
+$project-content-short-margin: 10px;
+$project-content-long-margin: 50px;
+
+$featured-projects-width: 800px;
+
+// Project list
+.projects-list__heading {
+  max-width: $featured-projects-width;
+  margin: 50px auto 20px;
+}
+
 // Page
 .project-page {
-  margin: 100px auto;
+  margin: 100px auto 100px;
   padding: 20px;
   max-width: 1000px;
+
+  h1 {
+    margin: 50px 0 10px;
+  }
+
+  h2 {
+    margin: 40px 0 10px;
+  }
+
+  h3 {
+    margin: 20px 0 5px;
+  }
 
   p {
     margin: 5px 0;
@@ -18,13 +41,10 @@
   padding: 50px 10px;
 }
 
-$project-content-short-margin: 10px;
-$project-content-long-margin: 50px;
-
-$featured-projects-width: 800px;
 
 .projects__heading {
-  margin: 20px $project-content-short-margin 50px;
+  font-size: 2em;
+  margin: 20px 0 50px;
 }
 
 // ========== Featured Projects ===============
@@ -36,6 +56,20 @@ $featured-projects-width: 800px;
 .featured-project-list {
   list-style-type: none;
   padding: 0;
+}
+
+.featured-project__featured {
+  font-size: 0.9em;
+  margin: 0 0 10px;
+  @include font-regular;
+  color: $project-featured-color;
+}
+
+$featured-title-margin-bottom: 10px;
+.featured-project__title {
+  max-width: 250px;
+  margin: 0 0 $featured-title-margin-bottom auto;
+  font-size: 1.5em;
 }
 
 .featured-project {
@@ -70,17 +104,6 @@ $featured-projects-width: 800px;
   margin: $project-content-short-margin;
 }
 
-.featured-project__featured {
-  font-size: 0.9em;
-  @include font-regular;
-  color: $project-featured-color;
-}
-
-.featured-project__title {
-  max-width: 250px;
-  margin: 0 0 0 auto;
-}
-
 .featured-project__links {
   padding: 0;
   list-style: none;
@@ -107,7 +130,7 @@ $featured-projects-width: 800px;
   text-align: start;
 
   .featured-project__title {
-    margin: 0 auto 10px 0;
+    margin: 0 auto $featured-title-margin-bottom 0;
   }
 
   .tech-tags {
