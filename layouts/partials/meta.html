@@ -16,7 +16,8 @@
 {{/* Twitter */}}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.twitterHandle }}" />
 <meta name="twitter:description" content="{{ .Site.Params.description }}"/>
-{{ $image = $originalImage.Resize "800x webp q80" }}
-<meta name="twitter:image" content="{{ $image.Permalink }}"/>
+{{ $twitterImage := resources.Get "images/TwitterCard.png" }}
+<meta name="twitter:image" content="{{ $twitterImage.Permalink }}"/>
 
