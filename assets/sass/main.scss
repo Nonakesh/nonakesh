@@ -1,7 +1,10 @@
+@use "sass:math";
+
 @import "normalize";
 
 @import "variables";
 @import "breakpoints";
+
 
 // === General Theme ===
 // Backgrounds
@@ -39,7 +42,7 @@ $hero-content-width: 500px;
 $hero-width: calc(#{$hero-content-width} + var(--hero-image-width));
 
 $hero-skew: 11deg;
-$tan-hero-skew: 0.19438030913;
+$tan-hero-skew: #{math.tan($hero-skew)};
 $hero-ribbon-additional-padding: 100px;
 
 $hero-social-color: $content-color;

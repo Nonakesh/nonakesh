@@ -1,5 +1,5 @@
 {{/*  Main Style  */}}
-{{ $stylemain := resources.Get "sass/main.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint "sha512" }}
+{{ $stylemain := resources.Get "sass/main.scss" | toCSS (dict "transpiler" "dartsass") | postCSS (dict "use" "autoprefixer") | minify | fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $stylemain.RelPermalink }}" integrity="{{ $stylemain.Data.Integrity }}">
 
 {{/* Deferred Scripts (Will only run when the DOM is loaded) */}}
