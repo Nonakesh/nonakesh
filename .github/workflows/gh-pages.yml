@@ -8,7 +8,7 @@ on:
 
 env:
   HUGO_VERSION: 0.104.3
-  DART_VERSION: 1.55.0
+  DART_SASS_VERSION: 1.55.0
 
 jobs:
   deploy:
