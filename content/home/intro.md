@@ -20,7 +20,7 @@ social:
   url: https://github.com/Nonakesh
 - name: LinkedIn
   faIcon: fa-linkedin
-  url: https://www.linkedin.com/in/simon-stix-555bb5104/
+  url: https://www.linkedin.com/in/simon-stix/
 ---
 
 I have been an enthusiastic programmer for over {{< years-since 2011 >}} years.
