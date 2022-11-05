@@ -1,6 +1,6 @@
 ---
 widget: hero
-image: /images/ProfilePicture.jpg
+image: /images/ProfilePicture.png
 imageResize: 250x
 weight: 10
 id: intro
