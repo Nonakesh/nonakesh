@@ -6,8 +6,8 @@ techTags:
     - Unity
 ---
 
-A VR panoramic view of the then-unfinished Bruckner Tower in Linz. 
+A VR panoramic view of the then-unfinished Bruckner Tower in Linz. Commissioned by City Wohnbau Letzbor GmbH.
 
-The application made it possible to see the view of apartments on different sides and heights of the tower.
+The application made it possible to show the view from apartments on different sides and heights of the tower.
 
 <!--more-->

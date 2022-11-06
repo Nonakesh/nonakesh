@@ -7,8 +7,8 @@ techTags:
 hasMore: false
 ---
 
-A bachelor thesis project for visualizing flight and hiking routes in mobile VR.
+My bachelor thesis project for visualizing flight and hiking routes in mobile VR.
 
-It was optimized to support a view distance of over 100km on a mobile phone, to make mountain ranges in the distance visible.
+It was optimized to support a view distance of over 100km on a mobile phone to make mountain ranges in the distance visible.
 
 <!--more-->

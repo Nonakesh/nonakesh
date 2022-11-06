@@ -27,7 +27,7 @@ I have been an enthusiastic programmer for over {{< years-since 2011 >}} years.
 During most of that time I've worked on games and tools for game developers, 
 but I'm always happy to explore new areas.
 
-My other projects included web development, like this website, procedural art, AI, microcontrollers, 
+My other projects include web development, like this website, procedural art, AI, microcontrollers, 
 but also 3d modelling, texturing, video editing, music composition, and almost all parts of game development.
 
 I will also use any opportunity to talk about the Rust programming language.
